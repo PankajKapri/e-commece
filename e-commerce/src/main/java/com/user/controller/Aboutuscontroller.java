@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class Aboutuscontroller {
 	
-	@RequestMapping(value="aboutus")
+@RequestMapping(value="aboutus")
 public String aboutus()
 {
 		return "aboutus";

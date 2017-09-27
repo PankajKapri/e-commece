@@ -3,6 +3,7 @@ package com.user.entity;
 import javax.persistence.Column;
 
 
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
@@ -11,23 +12,18 @@ import org.springframework.stereotype.Component;
 @Component
 @Entity
 public class User {
-	@Column
-	private String fname;
 	
-	@Column
-	private String lname;
+	@Id
+	private String username;
 	
 	@Column
 	private String gender;
 	
-	@Id
+	@Column
 	private String email;
 	
 	@Column
 	private String password;
-	
-	@Column
-	private String cnfrmpass;
 	
 	@Column
 	private String dob;
@@ -47,21 +43,14 @@ public class User {
 	@Column
 	private String country;
 
-	public String getFname() {
-		return fname;
+	public String getUsername() {
+		return username;
 	}
 
-	public void setFname(String fname) {
-		this.fname = fname;
+	public void setUsername(String username) {
+		this.username = username;
 	}
-
-	public String getLname() {
-		return lname;
-	}
-
-	public void setLname(String lname) {
-		this.lname = lname;
-	}
+	
 
 	public String getGender() {
 		return gender;
@@ -85,14 +74,6 @@ public class User {
 
 	public void setPassword(String password) {
 		this.password = password;
-	}
-
-	public String getCnfrmpass() {
-		return cnfrmpass;
-	}
-
-	public void setCnfrmpass(String cnfrmpass) {
-		this.cnfrmpass = cnfrmpass;
 	}
 
 	public String getDob() {
@@ -143,17 +124,4 @@ public class User {
 		this.country = country;
 	}
 
-	
-
-
-	
-
-	
-
-	
-	
-	
-	
-	
-	
-}
+	}

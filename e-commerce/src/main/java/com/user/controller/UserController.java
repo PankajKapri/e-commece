@@ -1,6 +1,7 @@
 package com.user.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -12,6 +13,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.user.DAO.UserDAO;
 import com.user.entity.User;
+
 
 @Controller
 public class UserController {
@@ -43,16 +45,16 @@ public class UserController {
 		return "viewAllUser";
 	}
 	@RequestMapping("/delete")
-	public String deleteuserlist(@RequestParam("uid") String email,User user,Model model)
+	public String deleteuserlist(@RequestParam("uid") String username,Model model)
 	{   
-		userdao.deleteUser(email);
+		userdao.deleteUser(username);
 		model.addAttribute("userlist",this.userdao.getList());
 		return "viewAllUser";
 	}
 	@RequestMapping("/edit")
-	public String getUser(@RequestParam("uid") String email,Model model)
+	public String getUser(@RequestParam("uid") String username,Model model)
 	{   
-        User user=userdao.getUser(email);
+        User user=userdao.getUser(username);
         model.addAttribute("userdata",user);
         model.addAttribute("user1", new User());
 		//model.addAttribute("userdata",this.userdao.getList());
@@ -67,6 +69,6 @@ public class UserController {
 		model.addAttribute("userlist",this.userdao.getList());
 		return "viewAllUser";
 	}
-	
+
 	
 }

@@ -2,8 +2,8 @@ package com.user.DAO;
 
 import java.util.List;
 
-import com.user.entity.User;
 
+import com.user.entity.*;
 public interface UserDAO {
 	
 	public void adduser(User user);
@@ -12,4 +12,6 @@ public interface UserDAO {
 	public User getUser(String id);
 	public void editUser(User user);
 	
+	
+    
 }

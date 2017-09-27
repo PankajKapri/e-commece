@@ -53,14 +53,13 @@
 <center><strong><h2>Welcome New User<h2></strong></center>
 <small class="text-danger"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Note:Field With * Are Mandatory)</b></small>
 <tr>
-<td><strong>Name<sup>*</sup></strong></td>
+<td><strong>Username<sup>*</sup></strong></td>
 </tr>
 <tr>
-<td><form:input type="text" id="fname" path="fname" class="form-control" name="first" placeholder="first" onblur="verifyname()"  required="required"/></td>
-<td><form:input type="text" id="lname" path="lname" class="form-control" name="last" placeholder="last"  required="required"/></td></tr>
+<td><form:input type="text" id="fname" path="username" class="form-control" name="username" placeholder="username" onblur="verifyname()"  required="required"/></td>
 <tr>
 <tr>
-<td><span id="fnamerr" style="color:red;"></span></td>
+<td><span id="username" style="color:red;"></span></td>
 </tr>
 <td><strong>Gender<sup>*</sup></strong></td>
 <tr>
@@ -92,7 +91,7 @@
 <td><strong>Confirm Password<sup>*</sup></strong></td>
 </tr>
 <tr>
-<td><form:input type="password" class="form-control" path="cnfrmpass"  id="cnfpwd" placeholder="confirm password" onblur="checkpwd()"  required="required"/></td>
+<td><input type="password" class="form-control" id="cnfpwd" placeholder="confirm password" onblur="checkpwd()"  required="required"></td>
 <td><span id="pwderrs" style="color:red;"></span></td>
 </tr>
 

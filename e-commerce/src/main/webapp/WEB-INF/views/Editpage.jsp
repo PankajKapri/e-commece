@@ -9,10 +9,8 @@
 </head>
 <body>
 <form:form action="updateuser" method="post" commandName="user1"> 
-<label value="First Name">First Name</label>
-<form:input type="text" path="fname" value="${userdata.fname}"/>
-<br><label value="Last Name"></label>
-<form:input type="text" path="lname" value="${userdata.lname}"/>
+<label value="username">userName</label>
+<form:input type="text" path="username" value="${userdata.username}"/>
 <br><label value="Email"></label>
 <form:input type="text" path="email" value="${userdata.email}"/>
 <br><label value="Password"></label>

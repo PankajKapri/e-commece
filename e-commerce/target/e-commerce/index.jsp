@@ -98,17 +98,19 @@ body {
 </form>
 </li>
         </ul>
-     <!--right nav  -->         
+     <!--right navbar  -->         
       <ul class="nav navbar-nav navbar-right">
        
        <li class="nav-item">
        <li><a href="aboutus"><span class="glyphicon glyphicon-heart"></span>ABOUT</a></li>
-      <li><a href="alluser"><span class="glyphicon glyphicon-envelope"></span>h2</a></li>
+      <li><a href="alluser"><span class="glyphicon glyphicon-list-alt"></span>CRUD</a></li>
+      
         
               <li><a href="Contact"><span class="glyphicon glyphicon-envelope"></span>Contact</a>
             </li>
         <li><a href="register"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
         <li><a href="login"><span class="glyphicon glyphicon-log-in"></span>login</a></li>
+         <li><a href="admin"><span class="glyphicon glyphicon-font"></span>dmin</a></li>
       </ul>
     </div>
   </div>
