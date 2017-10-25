@@ -7,8 +7,10 @@ public interface ProductDAO {
 	
 	public void addproduct(Product product);
 	public List<Product> getproductList();
-	public void deletePro(String id);
-	Product getProductById(int id);
+	public void deletePro(int id);
+	public Product EditProduct(int id);
+	public void UpdateProduct(Product product);
+
 	
 
 }

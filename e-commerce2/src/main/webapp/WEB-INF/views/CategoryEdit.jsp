@@ -42,11 +42,11 @@ text-align: center;
 <td><form:input type ="text" path="catid" value="${edit.catid}"/></td>
 </tr>
 <tr>
-<th>Customer name</th>
+<th>category name</th>
 <td><form:input type ="text" path ="catname" value="${edit.catname}"/></td>
 </tr>
 <tr>
-<th>Customer Descrption</th>
+<th>category Descrption</th>
  <td><form:input type ="text" path ="catdesc" value="${edit.catdesc}"/></td>
  </tr>
  <tr>

@@ -75,21 +75,19 @@ text-align: center;
 
 </style>
  </head>
-
+<body>
   <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
     
     
-      <a class="navbar-brand" href="#">Accesstools</a>
+      <a class="navbar-brand" href="#">ShopBrands</a>
     </div>
 <c:choose>
 <c:when test="${sessionScope.UserLoggedIn != null}">
  <ul class="nav navbar-nav">
-                    <li><a class="active" href="Home">Home</a>
-                   <li><a href="Helmets">Helmets</a>
-                   <li><a href="Gears">RydingGears</a>
-                   <li><a href="bike accessories">Bike Accessories</a></li></ul>
+                    <li><a class="active" href="Home">Home</a></li>
+                   <li><a href="Apple">Apple</a></li></ul>
                    
         
                 	
@@ -111,10 +109,19 @@ text-align: center;
 				
 			
 				<p>${sessionScope.UserLoggedIn}</p>
+				<script>
+				(function(){
+					
+					$("#cart").on("click"),function(){
+						$(".shopping-cart").fadeToggle("fast");
+					});
+				})();
+					
+				</script>
 				</div>
 </nav>
 
 
-
+</body>
 
 </html>

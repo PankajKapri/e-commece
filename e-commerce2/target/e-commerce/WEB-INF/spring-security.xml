@@ -17,20 +17,20 @@
 <security:http auto-config="true" use-expressions="true">
 	<security:intercept-url pattern="/Admin" access="hasRole('ROLE_ADMIN')" />
 	<security:intercept-url pattern="/Category" access="hasRole('ROLE_ADMIN')" />
-<!--  	<security:intercept-url pattern="/product" access="hasRole('ROLE_ADMIN')" />-->
+ 	<security:intercept-url pattern="/product" access="hasRole('ROLE_ADMIN')" />
 	<security:intercept-url pattern="/supplier" access="hasRole('ROLE_ADMIN')" />
-	<security:intercept-url pattern="/Category" access="hasRole('ROLE_ADMIN')" />
-	<security:intercept-url pattern="/product" access="hasRole('ROLE_ADMIN')" />
-	<security:intercept-url pattern="/Category" access="hasRole('ROLE_ADMIN')" />
-	<security:intercept-url pattern="/product" access="hasRole('ROLE_ADMIN')" />
-	<security:intercept-url pattern="/supplier" access="hasRole('ROLE_ADMIN')" />	
-	<security:intercept-url pattern="/supplier" access="hasRole('ROLE_ADMIN')" />
+	<security:intercept-url pattern="/saveCategory" access="hasRole('ROLE_ADMIN')" />
+	<security:intercept-url pattern="/updatepro" access="hasRole('ROLE_ADMIN')" />
+	<security:intercept-url pattern="/updatecat" access="hasRole('ROLE_ADMIN')" />
+	<security:intercept-url pattern="/SaveProduct" access="hasRole('ROLE_ADMIN')" />
+	<security:intercept-url pattern="/SaveSupplier" access="hasRole('ROLE_ADMIN')" />	
+	<security:intercept-url pattern="/updatesupp" access="hasRole('ROLE_ADMIN')" />
 	<security:intercept-url pattern="/UserProductPage" access="hasRole('ROLE_USER')" />
-  	<security:intercept-url pattern="/Cart" access="hasRole('ROLE_USER')" /> 
+  	<security:intercept-url pattern="/addcart" access="hasRole('ROLE_USER')" /> 
 	<security:intercept-url pattern="/checkout" access="hasRole('ROLE_USER')" />
 <security:intercept-url pattern="/payment" access="hasRole('ROLE_USER')" />
  	
-		<security:form-login login-page="/Login" default-target-url="/index" login-processing-url="/perform_login" authentication-failure-url="/Login" authentication-success-forward-url="/loginsuccess" />
+		<security:form-login login-page="/Login" default-target-url="/" login-processing-url="/perform_login" authentication-failure-url="/Login" authentication-success-forward-url="/loginsuccess" />
 		<security:logout logout-url="/perform_logout" invalidate-session="true" logout-success-url="/" />
 		<security:csrf disabled="true" />
 </security:http>

@@ -42,7 +42,7 @@ public class SupplierDAOImpl implements SupplierDAO {
 	
 
 }
-	public void deleteSupplier(String id)
+	public void deleteSupplier(int id)
 	{
 		Session session=sessionFactory.openSession();
 		Transaction trans=session.beginTransaction();
@@ -53,7 +53,7 @@ public class SupplierDAOImpl implements SupplierDAO {
 		session.close();
 		
 	}
-	public Supplier getSupplier(String id)
+	public Supplier getSupplier(int id)
 	{
 		Session session=sessionFactory.openSession();
 		Transaction trans=session.beginTransaction();

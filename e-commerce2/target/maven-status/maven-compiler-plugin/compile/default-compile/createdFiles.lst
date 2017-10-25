@@ -1,11 +1,11 @@
 com\user\controller\CategoryController.class
 com\user\controller\homecontroller.class
+com\user\controller\ProductDetails.class
 com\user\controller\LoginController.class
 com\user\entity\User.class
 com\user\entity\Category.class
 com\user\DAO\CategoryDAO.class
 com\user\controller\Aboutuscontroller.class
-com\user\controller\ViewProduct.class
 com\user\DAO\UserDAOImpl.class
 com\user\entity\Supplier.class
 com\user\DAO\SupplierDAO.class
@@ -18,6 +18,7 @@ com\user\controller\AdminController.class
 com\user\DAO\CategoryDAOImpl.class
 com\user\controller\UserController.class
 com\user\DAO\CartDAO.class
+com\user\controller\CartController.class
 com\user\entity\Cart.class
 com\user\DAO\ProductDAOImpl.class
 com\user\controller\SupplierController.class

@@ -41,7 +41,7 @@ public class ProductDAOImpl implements ProductDAO{
 		return prolist;
 		
 	}
-	public void deletePro(String id)
+	public void deletePro(int id)
 	{
 		Session session=sessionFactory.openSession();
 		Transaction trans=session.beginTransaction();
@@ -53,12 +53,27 @@ public class ProductDAOImpl implements ProductDAO{
 		
 		
 	}
-	public Product getProductById(int id)
+	public Product EditProduct(int id)
 	{
-		Session session=sessionFactory.getCurrentSession();
-		Product product=(Product)session.get(Product.class, id);
+		Session session=sessionFactory.openSession();
+		Transaction trans=session.beginTransaction();
+		Product product=(Product)session.get(Product.class,id);
+		trans.commit();
+		session.flush();
+		session.close();
 		return product;
 	}
+	public void UpdateProduct(Product product)
+	{
+		Session session=sessionFactory.openSession();
+		Transaction trans=session.beginTransaction();
+		session.update(product);
+		trans.commit();
+		session.flush();
+		session.close();
+	}
+	
+	
 	}
 
 	

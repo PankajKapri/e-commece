@@ -1,5 +1,5 @@
 package com.user.controller;
-import java.util.ArrayList;
+
 
 
 import java.util.Collection;
@@ -14,7 +14,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.user.DAO.UserDAO;
-import com.user.entity.User;
+
 @Controller
 public class LoginController {
 	@Autowired
@@ -35,7 +35,7 @@ public class LoginController {
 		     if (authority.getAuthority().equals(role)) 
 		     {
 		    	 session.setAttribute("UserLoggedIn", "true");
-		    	 session.setAttribute("Username", userid);
+		    	 session.setAttribute("username", userid);
 		    	 page="UserProductPage";		    	 
 		    	 break;
 		     }

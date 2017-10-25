@@ -3,6 +3,9 @@ package com.user.controller;
 
 
 
+
+
+
 import java.io.IOException;
 
 
@@ -30,12 +33,12 @@ import com.user.DAO.ProductDAO;
 import com.user.DAO.SupplierDAO;
 import com.user.entity.Product;
 import com.user.entity.Supplier;
-//import com.user.entity.*;
+
 
 @Controller
 public class Productcontroller {
 	
-	private static final String result = null;
+	
 	@Autowired
 	ProductDAO productdao;
 	@Autowired
@@ -56,7 +59,7 @@ public class Productcontroller {
 	
 		return "product";
 }
-	@RequestMapping(value="SaveProduct",method=RequestMethod.POST)
+	@RequestMapping(value="/SaveProduct",method=RequestMethod.POST)
 	public String NewMethod(@Valid @ModelAttribute("product")Product product,Model model,BindingResult result)
 	{  
 		if(result.hasErrors())
@@ -64,8 +67,11 @@ public class Productcontroller {
 		return "product";
 	}
 		productdao.addproduct(product);
-	    model.addAttribute("prolist",this.productdao.getproductList());
-		MultipartFile image = product.getImage();
+		model.addAttribute("product",new Product());//will remove data after submit
+		model.addAttribute("prolist",this.productdao.getproductList());
+	    model.addAttribute("catlist",this.categorydao.getCategoryList());
+	    model.addAttribute("suplist", this.supplierdao.getSupplierList());
+	    MultipartFile image = product.getImage();
 		Path path=	Paths.get("C:\\Users\\HP\\workspace-new\\e-commerce2\\src\\main\\webapp\\resources\\"+product.getId()+".jpg");
 		try {
 			image.transferTo(new File(path.toString()));
@@ -78,19 +84,34 @@ public class Productcontroller {
 		}
         return "product";
 		
-	}
-
-//delete 
+	}//delete 
 @RequestMapping("/deletepro")
-public String deleteProduct(@RequestParam("pid")String id,Model model)
+public String deleteProduct(@RequestParam("pid")int id,Model model)
 {
 	productdao.deletePro(id);
 	model.addAttribute("product",new Product());
     model.addAttribute("prolist",this.productdao.getproductList());
+    model.addAttribute("catlist",this.categorydao.getCategoryList());
+	model.addAttribute("suplist",this.supplierdao.getSupplierList());
+
 	return "product";
 	
 }
-		
-	
+@RequestMapping("Editpro")
+public String getProduct(@RequestParam("pid") int id,Model model)
+{
+	Product product=productdao.EditProduct(id);
+	model.addAttribute("edit",product);
+	model.addAttribute("product",new Product());
+	return "Editproduct";
 }
-
+//Update category
+@RequestMapping(value="updatepro",method=RequestMethod.POST)
+public String updateProduct(Model model,Product product)
+{
+	productdao.UpdateProduct(product);
+	 model.addAttribute("prolist",this.productdao.getproductList());	
+     model.addAttribute("product",new Product());
+	return "product";
+}
+}

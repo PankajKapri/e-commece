@@ -14,55 +14,6 @@
 </head>
 <body>
 <jsp:include page="CommonHeader.jsp"></jsp:include>
-<!-- Container (Portfolio Section) -->
-<div id="portfolio" class="container-fluid text-center bg-grey">
-  <h2>For your safety and control</h2><br>
-  <p>Must have wearable</p>
-  <div class="row text-center slideanim">
-    <div class="col-sm-4">
-      <div class="thumbnail">
-        <img src="images/Ls2.jpg /" alt="Helmet" width="200" height="250">
-        <p><a href="Helmet"><strong>Helmet</strong></a></p>
-        <p>great prize..</p>
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <div class="thumbnail">
-        <img src="images/safe.jpg /" alt="safe" width="400" height="400">
-        <p><strong>Ryding gears</strong></p>
-        <p>New BRAND</p>
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <div class="thumbnail">
-        <img src="images/WhieMask.jpg /" alt="moto" width="230px" height="200px">
-        <p><a href="FaceMask"><strong>Head&face cover</strong></a></p>
-        <p>with great offers.</p>
-      </div>
-    </div>
-  </div>
-     <div class="col-sm-4">
-      <div class="thumbnail">
-        <img src="images/Gears.jpg /" alt="safe" width="400" height="400">
-        <p><strong>Ryding gears</strong></p>
-        <p>Mototrance Riding Gear Body Armor Jacket For Bike Driving</p>
-      </div>
-    </div>
-       <div class="col-sm-4">
-      <div class="thumbnail">
-        <img src="images/RydingGlove.jpg /" alt="safe" width="300" height="400">
-        <p><a href="RydingGloves"><strong>Ryding gears</strong></a></p>
-        <p>One-Stop-Shop Bike Gloves (Black, M)</p>
-      </div>
-    </div>
-       <div class="col-sm-4">
-      <div class="thumbnail">
-        <img src="images/Mobileholder.jpg /" alt="safe" width="300" height="400">
-        <a href="Mobileholder"><strong>Mobile holder</strong></a>
-        <p>Andride Universal Bike Holder 360 Degree Rotating Bicycle Holder</p>
-      </div>
-    </div> 
-    </div>
 <jsp:include page="CommonFooter.jsp"></jsp:include>
 </body>
 </html>

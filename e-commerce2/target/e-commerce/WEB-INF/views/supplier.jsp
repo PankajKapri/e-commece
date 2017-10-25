@@ -14,56 +14,12 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   
 <style>
-<!--navbar part-->
-  body
-{
-background-color: orange;
-}
-	ul
-	{
-		list-style-type:none;
-		margin:0;
-		padding:0;
-		overflow:hidden;
-		background-color: #333;
-		
-  }
-  li a
-  {
-  	display:block;
-  	color:white;
-  	text-align: center;
-  	 padding: 25px 20px;
-    text-decoration: none;
-
-  }
-  li a:hover:not(.active)
-  {
-   background-color: #555;
-   color:white;
-  }
-  li a.active
-  {
-  	 background-color: #4CAF50;
-    color: white;
-}
-li
-{
-	float:left;
-	font-size: 25px;
-	font-family: Comic Sans MS;
-}
-h1
-{
-font-family: Comic Sans MS;
-text-align: center;
-}
  
- 
-  <!-- Table part -->
 
 
-table,th,td
+
+<!--TABLE PART -->
+	table,th,td
 	{
 		border:1px solid black;
 		border-collapse: collapse;
@@ -72,16 +28,88 @@ table,th,td
 	{   font-family:Comic Sans MS;
 		padding:5px;
 	}
+.navbar {
+      margin-bottom: 0;
+      z-index: 9999;
+      border: 0;
+      font-size: 15px !important;
+      line-height: 1.42857143 !important;
+      letter-spacing: 4px;
+      border-radius: 0;
+      font-family: Comic Sans MS, sans-serif;
+    }  
+    .container {
+      padding: 80px 120px;
+  }
+    
+    .jumbotron {
+      background-color: #f4511e;
+      color: #fff;
+      padding: 100px 25px;
+      font-family: Montserrat, sans-serif;
+  }
+  
+ 
+ 
+   li a:hover:not(.active)
+  {
+   background-color: #555;
+   color:white;
+  }
+  li a.active
+  {
+  	 background-color: brown;
+    color: white;
+}
+li
+{
+	float:left;
+	font-size: 15px;
+	font-family: Comic Sans MS;
+}
+h1
+{
+font-family: Times New Roman;
+text-align: center;
+}
+
+
+input[type="submit"] {
+background-color: #008dde;
+border: none;
+border-radius: 5px;
+-moz-border-radius: 3px;
+-webkit-border-radius: 3px;
+color: #f4f4f4;
+cursor: pointer;
+font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+height: 50px;
+text-transform: uppercase;
+width: 200px;
+-webkit-appearance:none;
+border-padding:10px 50px;
+}
+	
 	</style>
 	</head>
-	<ul>
-<li><a href = "#home">Accesstools</a></li>
+	<nav class="navbar navbar-default">
+	 <div class="container-fluid">
+	 <ul class="nav navbar-nav">
+<li><a href = "#home">ShopBrands</a></li>
 <li><a href = "Category">Category</a></li>
 <li><a class="active"  href = "Supplier">supplier</a></li>
 <li><a href = "Product">Product</a></li>
 </ul>
+<ul class="nav navbar-nav navbar-right">
+ <li><a href="perform_logout"><span class="glyphicon glyphicon-log-out"></span>logout</a></li>
+      </ul>
+      </nav>
+      <div class="container">
+      
+
 <h1>Supplier</h1>
 <form:form action="SaveSupplier" commandName="supplier">
+<table style="width:50%" align="center">
 
 <!--<tr>
   <th>id</th>
@@ -94,12 +122,12 @@ table,th,td
 <td><form:input type="text" path="supplieraddress" /></td></tr>
 <tr>
 <td><input type="submit" value="submit">
-</tr>
+</tr></table>
 </form:form>
 <br>
 <br>
 <br>
-<div class="container">
+
 <table class="table table-hover">
 
     <thead>
@@ -119,7 +147,8 @@ table,th,td
 <td><a href="Editsupp?sid=${supp.supplierid}">Edit</a></td>
 </tr>
 </tbody>
-</c:forEach></table></div>
+</c:forEach></table></div></div>
+
 
 
 </html>

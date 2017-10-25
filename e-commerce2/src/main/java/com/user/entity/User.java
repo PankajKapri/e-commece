@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 @Entity
 public class User {
 	
-	private static final Boolean TRUE = null;
+	
 
 	@Id
 	private String username;
@@ -67,10 +67,7 @@ public class User {
 		this.enabled = enabled;
 	}
 
-	public static Boolean getTrue() {
-		return TRUE;
-	}
-
+	
 	public String getUsername() {
 		return username;
 	}

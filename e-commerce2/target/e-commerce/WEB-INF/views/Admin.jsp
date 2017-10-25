@@ -39,6 +39,7 @@
 <body>
 <h1>Welcome you</h1>
 <jsp:include page="CommonHeader.jsp"></jsp:include>
+<jsp:include page="CommonFooter.jsp"></jsp:include>
 
 </body>
 </html>

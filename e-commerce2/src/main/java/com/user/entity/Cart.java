@@ -1,55 +1,78 @@
 package com.user.entity;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Table;
 
-import org.springframework.stereotype.Component;
 
-@Table
-@Component
+
 @Entity
-public class Cart{
-	
+public class Cart {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private int CartId;
+	private int citemid;
+	private int cartid;
+	private int id;
+	private int quantity;
+	private int prize;
+	private String username;
+	private String name;
+	private String status;
 	
-	@Column
-	private String Productname;
 	
-	@Column
-	private String quantity;
-
-	public int getCartId() {
-		return CartId;
+	public int getCitemid() {
+		return citemid;
 	}
-
-	public void setCartId(int cartId) {
-		CartId = cartId;
+	public void setCitemid(int citemid) {
+		this.citemid = citemid;
 	}
-
-	public String getProductname() {
-		return Productname;
+	public int getCartid() {
+		return cartid;
 	}
-
-	public void setProductname(String productname) {
-		Productname = productname;
+	public void setCartid(int cartid) {
+		this.cartid = cartid;
 	}
-
-	public String getQuantity() {
-		return quantity;
-	}
-
-	public void setQuantity(String quantity) {
+	
+	public void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
 	
-
+	public String getUsername() {
+		return username;
+	}
+	public void setUsername(String username) {
+		this.username = username;
+	}
 	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public int getPrize() {
+		return prize;
+	}
+	public void setPrize(int prize) {
+		this.prize = prize;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getQuantity() {
+		return quantity;
+	}
+	public String getStatus() {
+		return status;
+	}
+	public void setStatus(String status) {
+		this.status = status;
+	}
+ 
 
 }

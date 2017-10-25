@@ -45,7 +45,7 @@ public class CategoryDAOImpl implements CategoryDAO {
 		return catlist;
 		
 	}
-	public void deleteCategory(String id){
+	public void deleteCategory(int id){
 		Session session=sessionFactory.openSession();
 		Transaction trans=session.beginTransaction();
 		Category category=(Category)session.get(Category.class,id);
@@ -55,7 +55,7 @@ public class CategoryDAOImpl implements CategoryDAO {
 		session.close();
 	
 	}
-	public Category editCategory(String id)
+	public Category editCategory(int id)
 	{
 		Session session=sessionFactory.openSession();
 		Transaction trans=session.beginTransaction();

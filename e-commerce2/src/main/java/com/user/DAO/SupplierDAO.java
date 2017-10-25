@@ -6,8 +6,8 @@ public interface SupplierDAO {
 	
 	public void addsupplier(Supplier supplier);
 	public List<Supplier> getSupplierList();
-	public void deleteSupplier(String id);
-	public Supplier getSupplier(String id);
+	public void deleteSupplier(int id);
+	public Supplier getSupplier(int id);
 	public void UpdateSupplier(Supplier supplier);
 
 }

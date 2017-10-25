@@ -13,66 +13,66 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   
 <style>
-  <!--navbar part-->
-  body
-{
-background-color: orange;
-}
-	ul
-	{
-		list-style-type:none;
-		margin:0;
-		padding:0;
-		overflow:hidden;
-		background-color: #333;
-		
+ .navbar {
+      margin-bottom: 0;
+      z-index: 9999;
+      border: 0;
+      font-size: 15px !important;
+      line-height: 1.42857143 !important;
+      letter-spacing: 4px;
+      border-radius: 0;
+      font-family: Comic Sans MS, sans-serif;
+    }  
+    .container {
+      padding: 80px 120px;
   }
-  li a
-  {
-  	display:block;
-  	color:white;
-  	text-align: center;
-  	 padding: 25px 20px;
-    text-decoration: none;
-
+    
+    .jumbotron {
+      background-color: #f4511e;
+      color: #fff;
+      padding: 100px 25px;
+      font-family: Montserrat, sans-serif;
   }
-  li a:hover:not(.active)
+  
+ 
+ 
+   li a:hover:not(.active)
   {
    background-color: #555;
    color:white;
   }
   li a.active
   {
-  	 background-color: #4CAF50;
+  	 background-color: brown;
     color: white;
 }
 li
 {
 	float:left;
-	font-size: 25px;
+	font-size: 15px;
 	font-family: Comic Sans MS;
 }
 h1
 {
-font-family: Comic Sans MS;
+font-family: Times New Roman;
 text-align: center;
 }
-  <!-- Table part -->
 
+
+<!--TABLE PART -->
 	table,th,td
 	{
 		border:1px solid black;
 		border-collapse: collapse;
-		padding: 2px 5px;
 	}
 	th,td
 	{   font-family:Comic Sans MS;
 		padding:5px;
 	}
-	form field input [type="submit"] {
+input[type="submit"] {
 background-color: #008dde;
 border: none;
-border-radius: 3px;
+border-radius: 5px;
 -moz-border-radius: 3px;
 -webkit-border-radius: 3px;
 color: #f4f4f4;
@@ -80,21 +80,37 @@ cursor: pointer;
 font-family: 'Open Sans', Arial, Helvetica, sans-serif;
 height: 50px;
 text-transform: uppercase;
-width: 275px;
+width: 200px;
 -webkit-appearance:none;
+border-padding:10px 50px;
 }
-	</style>
+	
+form fieldset a {
+color: #5a5656;
+font-size: 15px;
+}
+	
+</style>
 	</head>
+	<nav class="navbar navbar-default">
 	 <div class="container-fluid">
-	<ul>
-<li><a href = "#home">Accesstools</a></li>
+	 <ul class="nav navbar-nav">
+	 
+<li><a href = "#home">ShopBrands</a></li>
 <li><a class="active" href = "Category">Category</a></li>
 <li><a href = "Supplier">supplier</a></li>
 <li><a href = "Product">Product</a></li>
 </ul>
-<h1>Customer</h1>
+<ul class="nav navbar-nav navbar-right">
+ <li><a href="perform_logout"><span class="glyphicon glyphicon-log-out"></span>logout</a></li>
+      </ul>
+      </nav>
+ <div class="container">    
+      
+      <h1>Category</h1>
 
 <form:form action ="saveCategory" commandName="category" method="post"> 
+<table style="width:50%" align="center">
 <!--<tr>
   <th>id</th>
 <td><form:input type="hidden" path="catid"/></td></tr> -->
@@ -106,12 +122,12 @@ width: 275px;
 <td><form:input type="text" path="catdesc" /></td></tr>
 <tr>
 <td><input type="submit" value="submit">
-</tr>
-</form:form></div>
+</tr></table>
+</form:form>
 <br>
 <br>
 <br>
-<div class="container">
+
 <table class="table table-hover">
 
     <thead>
@@ -132,7 +148,7 @@ width: 275px;
 
 </tr>
 </tbody>
-</c:forEach></table></div>
+</c:forEach></table></div></div>
 
 
 </html>

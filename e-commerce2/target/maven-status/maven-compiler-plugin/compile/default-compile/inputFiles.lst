@@ -6,7 +6,6 @@ C:\Users\HP\workspace-new\e-commerce2\src\main\java\com\user\controller\contactc
 C:\Users\HP\workspace-new\e-commerce2\src\main\java\com\user\controller\AdminController.java
 C:\Users\HP\workspace-new\e-commerce2\src\main\java\com\user\DAO\UserDAOImpl.java
 C:\Users\HP\workspace-new\e-commerce2\src\main\java\com\user\entity\Product.java
-C:\Users\HP\workspace-new\e-commerce2\src\main\java\com\user\controller\ViewProduct.java
 C:\Users\HP\workspace-new\e-commerce2\src\main\java\com\user\entity\Supplier.java
 C:\Users\HP\workspace-new\e-commerce2\src\main\java\com\user\entity\Category.java
 C:\Users\HP\workspace-new\e-commerce2\src\main\java\com\user\entity\Cart.java
@@ -24,3 +23,4 @@ C:\Users\HP\workspace-new\e-commerce2\src\main\java\com\user\DAO\SupplierDAO.jav
 C:\Users\HP\workspace-new\e-commerce2\src\main\java\com\user\DAO\CategoryDAOImpl.java
 C:\Users\HP\workspace-new\e-commerce2\src\main\java\com\user\DAO\UserDAO.java
 C:\Users\HP\workspace-new\e-commerce2\src\main\java\com\user\controller\SupplierController.java
+C:\Users\HP\workspace-new\e-commerce2\src\main\java\com\user\controller\ProductDetails.java

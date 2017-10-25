@@ -7,7 +7,7 @@
  <title>Insert title here</title>
 <style>
    body {
-        background-image: url("images/mapwall.jpg /");
+        background-image: url("resources/mapwall.jpg /");
 } 
 
 
@@ -56,7 +56,7 @@ color:	rgb(240,248,255)
 <nav class="navbar navbar-default navbar-fixed-bottom">    
 <footer class="text-center">
   
-  <h2>Accesstools</h2> 
+  <h2>ShopBrands</h2> 
 </footer>
 </nav>
 </div>

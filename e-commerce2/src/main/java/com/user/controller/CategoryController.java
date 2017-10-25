@@ -37,7 +37,7 @@ public class CategoryController {
 	}
 	//Deleting category
 	@RequestMapping(value="deletecat")
-	public String deleteCatlist(@RequestParam("cid") String catid,Model model)
+	public String deleteCatlist(@RequestParam("cid") int catid,Model model)
 	{
 		
 		categorydao.deleteCategory(catid);
@@ -48,7 +48,7 @@ public class CategoryController {
 	}
 	//get category
 	@RequestMapping("/Editcat")
-	public String getCategory(@RequestParam("cid") String catid,Model model)
+	public String getCategory(@RequestParam("cid") int catid,Model model)
 	{
 		Category category=categorydao.editCategory(catid);
 		model.addAttribute("edit",category);

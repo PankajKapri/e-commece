@@ -13,15 +13,16 @@ import org.springframework.web.multipart.MultipartFile;
 @Component
 @Entity
 public class Product {
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	
 	@Id
-	private String id;
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	private int id;
 	@Column
 	private String name;
 	@Column
-	private String prize;
+	private int prize;
 	@Column
-	private String quantity;
+	private int quantity;
 	@Column
 	private String descrption;
 	@Column
@@ -37,12 +38,7 @@ public class Product {
 	public void setImage(MultipartFile image) {
 		Image = image;
 	}
-	public String getId() {
-		return id;
-	}
-	public void setId(String id) {
-		this.id = id;
-	}
+	
 	public String getCustId() {
 		return CustId;
 	}
@@ -61,16 +57,25 @@ public class Product {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getPrize() {
+	
+	
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public int getPrize() {
 		return prize;
 	}
-	public void setPrize(String prize) {
+	public void setPrize(int prize) {
 		this.prize = prize;
 	}
-	public String getQuantity() {
+	public int getQuantity() {
 		return quantity;
 	}
-	public void setQuantity(String quantity) {
+	public void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
 	public String getDescrption() {
@@ -79,6 +84,7 @@ public class Product {
 	public void setDescrption(String descrption) {
 		this.descrption = descrption;
 	}
+	
 	
 	
 

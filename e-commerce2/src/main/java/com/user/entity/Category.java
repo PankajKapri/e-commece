@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 public class Category {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Id
-	private String catid;
+	private int catid;
 	
 	@Column
 	private String catname;
@@ -21,11 +21,14 @@ public class Category {
 	@Column
 	private String catdesc;
 
-	public String getCatid() {
+	
+	
+	
+	public int getCatid() {
 		return catid;
 	}
 
-	public void setCatid(String catid) {
+	public void setCatid(int catid) {
 		this.catid = catid;
 	}
 

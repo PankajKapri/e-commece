@@ -1,7 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
-<%@ taglib prefix="security" uri="http://www.springframework.org/security/tags"%>
-<%@ page isELIgnored="false"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -16,7 +16,7 @@
 
 <style>
 body {
-        background-image: url("resources/bgtheme.jpg /");
+        background-image: url("images/bgtheme.jpg /");
 }
 input[type=text] {
    width: 270px;
@@ -58,7 +58,9 @@ input[type=text]:focus {
       font-family: Montserrat, sans-serif;
   }
 
-
+body {
+        background-image: url("images/bgtheme.jpg /");
+} 
  
 </style>
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -77,9 +79,9 @@ input[type=text]:focus {
         <span class="icon-bar"></span>                        
       </button>
       <form action="welcome" method="get">
-      <a class="navbar-brand" href="welcome.jsp">AccessTools</a>
+      <a class="navbar-brand" href="welcome.jsp">AccessTools</a></form>
     </div>
-    </form>
+    
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
         <li class="active"><a href="#">Home</a></li>
@@ -102,13 +104,12 @@ input[type=text]:focus {
        
        <li class="nav-item">
        <li><a href="aboutus"><span class="glyphicon glyphicon-heart"></span>ABOUT</a></li>
-      
-      
+         
        <li><a href="Contact"><span class="glyphicon glyphicon-envelope"></span>Contact</a>
             </li>
         <li><a href="register"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
         <li><a href="Login"><span class="glyphicon glyphicon-log-in"></span>login</a></li>
-        
+      <!--    <li><a href="Loginerr" type="hidden"><span class="glyphicon glyphicon-log-in"></span>login</a></li>-->
       </ul>
     </div>
   </div>
@@ -125,17 +126,15 @@ input[type=text]:focus {
     <!-- Wrapper for slides -->
    <div class="carousel-inner">
       <div class="item active">
-        <img src="resources/spae2.jpg /" style="width:150%;height:370px;">
+        <img src="resources/Iphone x.jpg /" style="width:150%;height:370px;">
       </div>
 
       <div class="item">
-        <img src="resources/imae.jpg /" style="width:150%;height:370px;">
+        <img src="resources/Oneplus.jpg /" style="width:150%;height:370px;">
       </div>
-    
-      <div class="item">
-        <img src="resources/spare.jpg /"  style="width:150%;height:370px;">
-      </div>
-      </div>
+    </div>
+   
+      
 
     <!-- Left and right controls -->
     <a class="left carousel-control" href="#myCarousel" data-slide="prev">
@@ -149,54 +148,23 @@ input[type=text]:focus {
   </div>
 </div>
 <!-- Container (Portfolio Section) -->
-<div id="portfolio" class="container-fluid text-center bg-grey">
-  <h2>For your safety and control</h2><br>
-  <p>Must have wearable</p>
-  <div class="row text-center slideanim">
-    <div class="col-sm-4">
-      <div class="thumbnail">
-        <img src="images/Helmet.jpg /" alt="Helmet" width="200" height="200">
-        <p><strong>Helmet</strong></p>
-        <p>great prize..</p>
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <div class="thumbnail">
-        <img src="images/safe.jpg /" alt="safe" width="400" height="400">
-        <p><strong>Ryding gears</strong></p>
-        <p>New BRAND</p>
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <div class="thumbnail">
-        <img src="images/safetyacc.jpg /" alt="moto" width="400" height="400">
-        <p><strong>Head & face cover</strong></p>
-        <p>with great offers.</p>
-      </div>
-    </div>
-  </div>
-     <div class="col-sm-4">
-      <div class="thumbnail">
-        <img src="images/Gears.jpg /" alt="safe" width="400" height="400">
-        <p><strong>Ryding gears</strong></p>
-        <p>Mototrance Riding Gear Body Armor Jacket For Bike Driving</p>
-      </div>
-    </div>
-       <div class="col-sm-4">
-      <div class="thumbnail">
-        <img src="images/RydingGlove.jpg /" alt="safe" width="300" height="400">
-        <p><strong>Ryding gears</strong></p>
-        <p>One-Stop-Shop Bike Gloves (Black, M)</p>
-      </div>
-    </div>
-       <div class="col-sm-4">
-      <div class="thumbnail">
-        <img src="images/Mobileholder.jpg /" alt="safe" width="300" height="400">
-        <p><strong>Mobile holder</strong></p>
-        <p>Andride Universal Bike Holder 360 Degree Rotating Bicycle Holder</p>
-      </div>
-    </div> 
-    </div>
+<div id="container">
+<c:forEach items="${productlist}" var="product"> 
+<div class="column">
+<div class="col-sm-6 col-md-3">
+
+<a href="productdescription/${product.id }" class="thumbnail">
+<img src="<c:url value="/resources/${product.id }.jpg"/>" style="height:200px; width:60%" alt="Error on loading images"/>
+</a>
+<div class="caption">
+<h4>PRODUCT NAME:${product.name}</h4>
+<p>Rs.${product.prize}</p>
+</div>
+</div>
+
+</div>
+</c:forEach>
+</div>
     <!-- Footer -->
     <div class="container">
 <nav class="navbar navbar-default navbar-fixed-bottom">    

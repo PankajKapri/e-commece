@@ -1,25 +1,11 @@
 package com.user.DAO;
 
 import java.util.List;
-
-
-
-
-
-import javax.management.Query;
-
 import org.hibernate.Session;
-
-
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-
-import com.user.entity.Category;
-//import com.user.entity.Customer;
-import com.user.entity.Product;
-import com.user.entity.Supplier;
 import com.user.entity.User;
 
 

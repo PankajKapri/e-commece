@@ -7,7 +7,7 @@
  <title>Insert title here</title>
 <style>
    body {
-        background-image: url("images/mapwall.jpg /");
+        background-image: url("resources/mapwall.jpg /");
 } 
 
 

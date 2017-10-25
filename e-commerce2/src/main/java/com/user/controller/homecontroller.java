@@ -11,11 +11,20 @@ public class homecontroller {
 	{
 		return "Loginpage";
 	}
-	
-	
-	@RequestMapping(value="Home")
-	public String Home()
+	@RequestMapping("/OrderConfirm")
+	public String ModeOfPayment()
 	{
-	  return "UserProductPage";
+		return "Mode of payment";
 	}
+	@RequestMapping("/Thankyou")
+	public String ThankYou()
+	{
+		return "ThankYou";
+	}
+	@RequestMapping("/Loginerr")
+	public String Loginerr()
+	{
+		return "LoginErr";
+	}
+	
 }

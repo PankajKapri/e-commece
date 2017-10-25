@@ -15,8 +15,8 @@
 <div class="container">
 <nav class="navbar navbar-default navbar-fixed-bottom">    
 <footer class="text-center">
-  </a><br><br>
-  <p>To visit us<a href="aboutus" data-toggle="tooltip" title="Visit aboutus">www.acesstool.com</a></p> 
+  <br><br>
+  <p>To visit us<a href="aboutus" data-toggle="tooltip" title="Visit aboutus">www.ShopBrands.com</a></p> 
 </footer>
 </nav>
 </div>

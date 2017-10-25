@@ -32,7 +32,7 @@ public class SupplierController {
 		
 	}
   @RequestMapping("/deletesupp")
-  public String DeleteSupplier(@RequestParam("sid") String supplierid,Model model )
+  public String DeleteSupplier(@RequestParam("sid") int supplierid,Model model )
   {
 	  supplierdao.deleteSupplier(supplierid);
 	  model.addAttribute("supplier",new Supplier());
@@ -42,7 +42,7 @@ public class SupplierController {
 	  
   }//get Supplier
   @RequestMapping("/Editsupp")
-  public String getsupplier(@RequestParam("sid") String supplierid,Model model)
+  public String getsupplier(@RequestParam("sid") int supplierid,Model model)
   {
 	  Supplier supplier = supplierdao.getSupplier(supplierid);
 	  model.addAttribute("editsup",supplier);

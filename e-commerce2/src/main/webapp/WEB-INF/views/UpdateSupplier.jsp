@@ -32,20 +32,20 @@ text-align: center;
 </style>
 <body>
 <div class="container-fluid">
-<h1>Category</h1>
+<h1>Supplier</h1>
 <form:form action = "updatesupp" modelAttribute="supplier" method="post">
 <table style="width:50%">
 <tr>
   <tr>
-<th>category id</th>
+<th>Supplier id</th>
 <td><form:input type ="text" path="supplierid" value="${editsup.supplierid}"/></td>
 </tr>
 <tr>
-<th>Customer name</th>
+<th>Supplier name</th>
 <td><form:input type ="text" path ="suppliername" value="${editsup.suppliername}"/></td>
 </tr>
 <tr>
-<th>Customer Descrption</th>
+<th>Supplier Address</th>
  <td><form:input type ="text" path ="supplieraddress" value="${editsup.supplieraddress}"/></td>
  </tr>
  <tr>

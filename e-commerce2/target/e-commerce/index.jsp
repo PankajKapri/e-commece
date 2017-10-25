@@ -1,6 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
-<%@ taglib prefix="security" uri="http://www.springframework.org/security/tags"%>
-<%@ page isELIgnored="false"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -104,13 +103,13 @@ body {
        
        <li class="nav-item">
        <li><a href="aboutus"><span class="glyphicon glyphicon-heart"></span>ABOUT</a></li>
-      
+      <li><a href="alluser"><span class="glyphicon glyphicon-list-alt"></span>CRUD</a></li>
       
        <li><a href="Contact"><span class="glyphicon glyphicon-envelope"></span>Contact</a>
             </li>
         <li><a href="register"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-        <li><a href="Login"><span class="glyphicon glyphicon-log-in"></span>login</a></li>
-        
+        <li><a href="login"><span class="glyphicon glyphicon-log-in"></span>login</a></li>
+         <li><a href="admin"><span class="glyphicon glyphicon-font"></span>dmin</a></li>
       </ul>
     </div>
   </div>

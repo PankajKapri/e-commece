@@ -13,24 +13,28 @@
 <title>product</title>
 <style>
 
-	ul
-	{
-		list-style-type:none;
-		margin:0;
-		padding:0;
-		overflow:hidden;
-		background-color: #333;
-		
+	.navbar {
+      margin-bottom: 0;
+      z-index: 9999;
+      border: 0;
+      font-size: 15px !important;
+      line-height: 1.42857143 !important;
+      letter-spacing: 4px;
+      border-radius: 0;
+      font-family: Comic Sans MS, sans-serif;
+    }  
+    .container {
+      padding: 80px 120px;
   }
-  li a
-  {
-  	display:block;
-  	color:white;
-  	text-align: center;
-  	 padding: 25px 20px;
-    text-decoration: none;
-
+    
+    .jumbotron {
+      background-color: #f4511e;
+      color: #fff;
+      padding: 100px 25px;
+      font-family: Montserrat, sans-serif;
   }
+  
+ 
   li a:hover:not(.active)
   {
    background-color: #555;
@@ -38,18 +42,18 @@
   }
   li a.active
   {
-  	 background-color: #4CAF50;
+  	 background-color: brown;
     color: white;
 }
 li
 {
 	float:left;
-	font-size: 25px;
+	font-size: 15px;
 	font-family: Comic Sans MS;
 }
 h1
 {
-font-family: Comic Sans MS;
+font-family: Times New Roman;
 text-align: center;
 }
 
@@ -84,17 +88,23 @@ border-padding:10px 50px;
 
 	</style>
 	</head>
-	<div class="container-fluid">
-<ul>
+	<nav class="navbar navbar-default">
+	 <div class="container-fluid">
+	 <ul class="nav navbar-nav">
+
 <li><a href = "#home">Accesstools</a></li>
 <li><a href = "Category">Category</a></li>
 <li><a href = "Supplier">supplier</a></li>
 <li><a class="active" href = "Product">Product</a></li>
 </ul>
-
-
+<ul class="nav navbar-nav navbar-right">
+ <li><a href="perform_logout"><span class="glyphicon glyphicon-log-out"></span>logout</a></li>
+      </ul></div></nav>
+      
+      <div class="container">
+      
 <h1>PRODUCT</h1>
-<form:form action = "SaveProduct" modelAttribute="product" method="post">
+<form:form action = "SaveProduct" modelAttribute="product" method="post" enctype="multipart/form-data">
 <table style="width:50%" align="center">
 <tr>
 <!--  <tr>
@@ -114,7 +124,7 @@ border-padding:10px 50px;
 <td><form:input type ="text" path ="quantity"/></td>
 </tr>
 <tr>
-<th>descrption</th>
+<th>description</th>
  <td><form:input type ="text" path ="descrption"/></td>
  </tr><tr>
 <th>Category Name</th>
@@ -133,15 +143,15 @@ border-padding:10px 50px;
          </form:select></td>
 </tr>
 <tr>
-<td>
-<p>Upload an image</p><input type="file" name="Image">
-</td></tr>
+ <th>Upload a image</th>
+<td><input type="file" name="Image"></td>
+</tr>
 <tr>   
 <td><input type ="submit" value="Submit"  ></td>
         
      </tr>
    </table>
-</form:form></div>
+</form:form>
 
 <br>
 <br>
@@ -156,11 +166,11 @@ border-padding:10px 50px;
         <th>PRIZE</th>
         <th>QUANTITY</th>
         <th>DESCRIPTION</th>
-        
         <th>Image</th>
       </tr>
       </thead>
  <c:forEach var="pro" items="${prolist}">
+ <c:url value="/resources/${pro.id}.jpg" var="imageurl"></c:url>
    <tbody>
 <tr>
 <td>${pro.id}</td>
@@ -168,10 +178,11 @@ border-padding:10px 50px;
 <td>${pro.prize}</td>
 <td>${pro.quantity}</td>
 <td>${pro.descrption}</td>
-<td><img src="${imageurl }" height="50" width="50"></td>
+<td><img src="${imageurl}" height="50" width="50"></td>
 <td><a href="deletepro?pid=${pro.id}">Delete</a></td>
+<td><a href="Editpro?pid=${pro.id}">Edit</a></td>
 </tr>
 </tbody>
-</c:forEach></table></div> 
+</c:forEach></table></div></div>
 
 </html>
